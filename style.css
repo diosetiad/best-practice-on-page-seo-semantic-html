@@ -1,0 +1,286 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap");
+
+/* Base */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: poppins, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Mobile */
+@media (min-width:320px) {
+body{
+  font-size: 14px;
+}
+
+/* Navbar */  
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 10%;
+}
+.header__logo {
+  width: 170px;
+  height: 50px;
+}
+.header__menu {
+  display: flex;
+}
+.header__menu li{
+  list-style: none;
+  margin: 0 20px;
+}
+.header__menu li a{
+  text-decoration: none;
+  font-weight: 500;
+  color: #373737;
+}
+.header__menu li a:hover{
+  color: #7273F1;
+  transition: 0.3s;
+}
+
+/* Home Section */
+.home{
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.home img{
+  width: 100%;
+}
+
+.home__title{
+  font-weight: 900;
+  color: #373737;
+  margin-bottom: 10px;
+}
+.home__desc{
+  font-weight: 500;
+  color: #5B5B5B;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.home__cta{
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #7273F1;
+  color: #ffffff;
+}
+button.home__cta{
+  font-family: poppins,sans-serif;
+  font-weight: 500;
+}
+.home__cta:hover{
+  background: #E98C4C;
+  color: #373737;
+  transition: 0.3s;
+}
+
+/* Portfolio & Layanan Section */
+.portfolio{
+  padding: 0 10%;
+  height: auto;
+  background: #FAFAFA;
+}
+.portfolio h2 {
+  margin: 20px 0;
+  font-family: poppins,sans-serif;
+  font-weight: 700;
+  color: #373737;
+}
+.portfolio__img, .portfolio__service{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio__img img{
+  width: 100%;
+}
+.portfolio__service ol{
+  counter-reset: li;
+  list-style: none;
+  margin-bottom: 20px;
+}
+.portfolio__service ol li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #5B5B5B;
+  font-weight: 500;
+}
+.portfolio__service ol li::before{
+  content: counter(li);
+  counter-increment: li;
+  color: #5B5B5B;
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+/* Testimoni Section */
+.testimoni{
+  padding: 0 10%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.testimoni__tittle{
+  margin: 20px 0;
+  font-family: poppins,sans-serif;
+  font-weight: 700;
+  color: #373737
+}
+.testimoni__list{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.testimoni__1{
+  background-color:#6072E221;
+}
+.testimoni__2{
+  background-color:#982BBE21;
+}
+.testimoni__3{
+  background-color:#E2626221;
+}
+.testimoni article{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 33%;
+  border-radius: 25px;
+  padding: 20px;
+  height: 300px;
+  max-width: 300px;
+  margin: 10px 20px;
+  color: #37474F;
+  font-weight: 500;
+}
+.testimoni__profile{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.testimoni__profile img{
+  margin-right: 20px;
+}
+
+/* Footer */
+footer{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #BCD0E57F;
+  padding: 20px 0;
+  color: #5B5B5B;
+  font-weight: 500;
+}
+}
+
+/* Tablet */
+@media (min-width:768px) {
+  body{
+    font-size: 16px;
+  }
+
+  /* Navbar */  
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5% 10%;
+  }
+  
+  /* Home Section */
+  .home{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .home__content{
+    width: 50%;
+  }
+
+  .home img{
+    width: 50%;
+  }
+  
+  /* Portfolio & Layanan Section */
+  .portfolio{
+    display: flex;
+  }
+  .portfolio__img, .portfolio__service{
+    flex-basis: 50%;
+    justify-content: flex-start;
+  }
+  .portfolio__img img{
+    width: 80%;
+  }
+  
+  /* Testimoni Section */
+  .testimoni__list{
+    flex-direction: row;
+  }
+  
+  /* Footer */
+  footer{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Desktop */
+@media (min-width:1024px) {
+body{
+  font-size: 18px;
+}
+
+  /* Navbar */  
+  .header {
+    justify-content:  space-between;
+    padding: 2% 10%;
+  }
+  .header__logo {
+    width: 220px;
+  }
+
+/* Home Section */
+  .home{
+    align-items: center;
+  }
+
+/* Portfolio & Layanan Section */
+  .portfolio{
+    padding: 2% 10% 3% 10%;
+  }
+}
